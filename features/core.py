@@ -38,6 +38,3 @@ def exits_by_room(data):
 
 def first_exit(room):
     return list(room["exits"].keys())[0]
-
-def neighbors(data, room_key):
-    return list(data["rooms"][room_key]["exits"].values())
