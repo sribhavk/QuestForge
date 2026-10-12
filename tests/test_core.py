@@ -17,7 +17,17 @@ class TestCore(unittest.TestCase):
     def test_describe_returns_description(self):
         room = {"description": "A cramped kitchen.", "exits": {}}
         self.assertEqual(core.describe(room), "A cramped kitchen.")
-
+    
+    def test_neighbors(self):
+        data = {"rooms": {
+            "entrance": {"description": "A cold entrance hall of grey stone.", "exits": {"north": "library", "east": "kitchen"}},
+            "library": {"description": "Dusty shelves lean under old books.", "exits": {"south": "entrance"}},
+            "kitchen": {"description": "A cramped kitchen smelling of woodsmoke.", "exits": {"west": "entrance"}},
+            "study": {"description": "A tidy study with a locked desk drawer.", "exits": {}},
+        }}
+        self.assertEqual(core.neighbors(data, "entrance"), ["library", "kitchen"])
+        self.assertEqual(core.neighbors(data, "study"), [])
+        self.assertEqual(core.neighbors(data, "kitchen"), ["entrance"])
 
 if __name__ == "__main__":
     unittest.main()
