@@ -18,6 +18,7 @@ def exits_for(room):
 
 
 def count_exits(room):
+    """This returns the number of exits that a given room has. This room is a dict with the exits as part of the variable."""
     return len(room["exits"])
 
 
