@@ -32,9 +32,10 @@ def move(data, current_key, direction):
 def exits_by_room(data):
     counts = {}
     for key, room in data["rooms"].items():
-        counts[key] = len(room["exts"])
+        counts[key] = len(room["exits"])
     return counts
 
 
 def first_exit(room):
-    return list(room["exits"].keys())[len(room["exits"])]
+    # return list(room["exits"].keys())[len(room["exits"]) - 1]
+    return list(room["exits"].keys())[0]
