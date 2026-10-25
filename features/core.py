@@ -39,3 +39,4 @@ def exits_by_room(data):
 def first_exit(room):
     # return list(room["exits"].keys())[len(room["exits"]) - 1]
     return list(room["exits"].keys())[0]
+    # wasn't sure whether to have 0 as index or just change index so code works, but function name suggests 1st choice
