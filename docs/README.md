@@ -35,6 +35,6 @@ python -m unittest
 
 ## Where to start
 
-Pick a ticket from the `tickets/` folder (or the Issues tab once your section
+<Pick a ticket from the `tickets/` folder (or the Issues tab once your section
 repo exists). Read `CONTRIBUTING.md` for the Definition of Done every pull
-request has to meet.
+request has to meet.>
