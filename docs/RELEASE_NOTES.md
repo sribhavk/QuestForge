@@ -15,4 +15,8 @@ release goes first. Keep each entry to what a user would notice.
 - Anything that behaves differently than before.
 ```
 
+**Added** the neighbors helper funtion.
+
+**Debugged** errors in core.py code.
+
 <!-- Your first real release note goes below this line. -->
