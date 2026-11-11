@@ -50,6 +50,10 @@ def main():
         elif choice == "5":
             room = core.get_rooms(data)[current]
             print(str(core.count_exits(room)) + " exits from here.")
+            print("Rooms to exit to:")
+            neigh = core.neighbors(data, current)
+            for item in neigh:
+                print(item)
         elif choice == "6":
             print(core.exits_by_room(data))
         elif choice == "7":
